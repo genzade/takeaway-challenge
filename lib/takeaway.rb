@@ -1,4 +1,4 @@
-require_relative 'order'
+require 'order'
 
 class Takeaway
 
@@ -15,6 +15,7 @@ class Takeaway
     dishes.each do |dish, quantity|
       order.add(dish, quantity)
     end
+    order.total
   end
 
   private

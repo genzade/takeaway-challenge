@@ -18,4 +18,16 @@ describe Menu do
     expect(menu.select).to eq(selected_menu)
   end
 
+  it 'is on the menu?' do
+    expect(menu.has_dish?(:pizza)).to be true
+  end
+
+  it 'is not on the menu?' do
+    expect(menu.has_dish?(:rissotto)).to be false
+  end
+
+  it 'calculates the price' do
+    expect(menu.price(:pizza)).to eq(dishes[:pizza])
+  end
+
 end
